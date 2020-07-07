@@ -131,4 +131,6 @@ HTML Code : &#9823;
 
 ## Referene
 
-See [CSSHTML]: http://code2care.org/pages/chessboard-with-pieces-using-pure-html-and-css/
+See 
+1. Chessboard with pieces using pure HTML and CSS: http://code2care.org/pages/chessboard-with-pieces-using-pure-html-and-css/
+2. N Queen Problem using Backtracking: https://www.geeksforgeeks.org/n-queen-problem-backtracking-3/
