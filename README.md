@@ -129,7 +129,7 @@ HTML Code : &#9823;
 <div class="white">&#9814;</div>
 ```
 
-## Referene
+## Reference
 
 See 
 1. Chessboard with pieces using pure HTML and CSS: http://code2care.org/pages/chessboard-with-pieces-using-pure-html-and-css/
