@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta charset="UTF-8"> 
+<title>Chessboard using Pure CSS and HTML</title>
+<style type="text/css">
+.chessboard {
+    width: 640px;
+    height: 640px;
+    margin: 20px;
+    border: 25px solid #333;
+}
+.black {
+    float: left;
+    width: {{cellsize}}px;
+    height: {{cellsize}}px;
+    background-color: #999;
+    font-size: {{fontsize}}px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+}
+.white {
+    float: left;
+    width: {{cellsize}}px;
+    height: {{cellsize}}px;
+    background-color: #fff;
+    font-size: {{fontsize}}px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+}
+</style>
+</head>
+<body>
+<h1>N QUEENS PROBLEM</h1>
+<form method='POST' action='' enctype='multipart/form-data'>
+{% csrf_token %}
+{{ form  }} <input type='submit' class='btn btn-primary' value='Submit'/>
+</form>
+<br /><br />
+<div class="chessboard">
+{% for row in board %}
+    <!-- Do stuff -->
+    {% for cell in row %}
+    	{% if forloop.parentloop.counter|divisibleby:"2" %}
+	    	{% if forloop.counter|divisibleby:"2" %}
+	    	<div class="white">{% if cell == 1 %}&#9813;{% endif %}</div>
+	    	{% else %}
+	    	<div class="black">{% if cell == 1 %}&#9813;{% endif %}</div>
+	    	{% endif %}
+    	{% else %}
+    		{% if forloop.counter|divisibleby:"2" %}
+	    	<div class="black">{% if cell == 1 %}&#9813;{% endif %}</div>
+	    	{% else %}
+	    	<div class="white">{% if cell == 1 %}&#9813;{% endif %}</div>
+	    	{% endif %}
+    	{% endif %}
+    {% endfor %}
+{% endfor %}
+</div>
+</body>
+</html>
